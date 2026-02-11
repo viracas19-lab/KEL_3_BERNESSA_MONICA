@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Data Guru</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 min-h-screen">
+
+<!-- HEADER -->
+<header class="bg-white shadow-sm sticky top-0 z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+    <h1 class="text-xl font-bold flex items-center gap-2">
+      👨‍🏫 <span>Data Guru</span>
+    </h1>
+    <a href="index.html"
+       class="text-sm text-blue-600 hover:underline self-start sm:self-auto">
+      ← Kembali ke Dashboard
+    </a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+
+  <!-- SEARCH -->
+  <div class="mb-4">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Cari guru / mapel / kelas..."
+      class="w-full sm:max-w-sm px-4 py-2 rounded-lg border border-slate-300
+             focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none"
+    />
+  </div>
+
+  <!-- TABLE CARD -->
+  <div class="bg-white rounded-xl shadow overflow-hidden">
+
+    <!-- TABLE SCROLL -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead class="bg-slate-200 text-slate-700">
+          <tr>
+            <th class="p-3 text-left whitespace-nowrap">NIP</th>
+            <th class="p-3 text-left whitespace-nowrap">Nama Guru</th>
+            <th class="p-3 text-left whitespace-nowrap">Mata Pelajaran</th>
+            <th class="p-3 text-left whitespace-nowrap">Kelas</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="divide-y"></tbody>
+      </table>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 p-4 border-t text-sm">
+      <span id="info" class="text-slate-600"></span>
+
+      <div class="flex gap-2 self-end sm:self-auto">
+        <button
+          id="prevBtn"
+          class="px-4 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 transition">
+          Prev
+        </button>
+        <button
+          id="nextBtn"
+          class="px-4 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 transition">
+          Next
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script src="js/teachers.js"></script>
+
+</body>
+</html>
