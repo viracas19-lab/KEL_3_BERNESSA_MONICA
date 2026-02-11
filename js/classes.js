@@ -22,7 +22,7 @@ Promise.all([
       .forEach(s => {
         originalData.push({
           class: c.name,
-          lesson: lessonById[s.teacher_id]?.subject || '-',
+          lesson: lessonById[s.subject_id]?.subject || '-',
           teacher: teacherById[s.teacher_id]?.name || '-'
         });
       });
